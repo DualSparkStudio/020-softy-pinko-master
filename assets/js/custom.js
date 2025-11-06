@@ -6,8 +6,14 @@
 	mobileNav();
 
 
-	// Scroll animation init
-	window.sr = new scrollReveal();
+	// Enhanced Scroll animation init with support for scroll up and down
+	window.sr = new scrollReveal({
+		reset: true,  // Reset animations when scrolling back up (enables scroll up animations)
+		move: '50px',
+		opacity: 0,
+		easing: 'ease-in-out',
+		viewportFactor: 0.2  // Trigger animation when 20% of element is visible
+	});
 	
 
 	// Menu Dropdown Toggle
